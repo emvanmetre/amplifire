@@ -1,0 +1,141 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8">
+<meta charset="UTF-8">
+<title>amplifire | home</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,400;1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+
+  <nav class="navbar">
+    <div class="menu-toggle" id="mobile-menu">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+    <div class="nav-list">
+      <a href="index.html" class="nav-link"><img src="static/logo.png" alt="Logo" id="logo"></a>
+      <a href="#" class="nav-link">Discover</a>
+      <a href="#" class="nav-link">Trending</a>
+      <a href="profile.html" class="nav-link">Profile</a>
+      <div class="search-container">
+        <input type="text" placeholder="What's on your mind..." class="nav-link" id="search-bar">
+        <button class="search-button">Search</button>
+      </div>
+      <a href="#" class="nav-link">Login/Sign-up</a>
+    </div>
+
+  </nav>
+  
+  <div class="page" id="page">
+      <div id="pfbanner" class="pfbanner">
+        <img id="banner-pic" src="https://via.placeholder.com/1600x400" alt="Banner Picture" class  = "banner-pic">
+      </div>
+      <div class="container">
+        <div class="column user">
+          <div class="box brick" id="post">
+            <div class="profile-container">
+              <img id="profile-pic" src="https://via.placeholder.com/100" alt="Profile Picture" class  = "profile-pic">
+            </div>
+            <h1>UserName</h1>
+            <h4>Here you can put some information about yourself!</h4>
+          </div>
+          <div class="box brick" id="post">
+            <h2>Edit Modules</h2>
+            <button onclick="uploadProfilePic()">Upload Profile Pic</button>
+            <button onclick="uploadBanner()">Set Banner</button>
+            <input type="color" id="bg-color-picker" value="#ffffff">
+            <button onclick="changeBgColor()">Change Background</button>
+            <button onclick="changePostColor()">Change Post Color</button>
+            <button onclick="changeMenuColor()">Change Menu Color</button>
+            <button onclick="changeFontColor()">Change Text Color</button>
+          </div>
+      </div>
+      <div class="column wide-column brick" id=post>
+        <div class="row">
+            <img src="static/usersel.png" id="pfp">
+                post
+          </div>
+          <div class="row">
+            <img src="static/usersel.png" id="pfp">
+                i'm thinking of quitting my job...
+          </div>
+          <div class="row">
+            <img src="static/usersel.png" id="pfp">
+                anyone have a boss constantly micromanaging their every move?
+          </div>
+          <div class="row">
+            <img src="static/usersel.png" id="pfp">
+                I have autism and I struggle with going out on dates. Any advice for making them a bit more comfortable?
+          </div>
+      </div>
+      </div>
+      
+      
+  </div>
+
+<img src="static/banner.png" id="banner">
+
+  <script src="script.js"></script>
+  
+  <script>function uploadProfilePic() {
+  const input = document.getElementById('profile-pic-upload');
+  input.click();
+  input.addEventListener('change', function() {
+    const file = input.files[0];
+    const reader = new FileReader();
+    reader.readAsDataURL(file);
+    reader.onload = function() {
+      document.getElementById('profile-pic').src = reader.result;
+    };
+  });
+}
+
+function uploadBanner() {
+  const input = document.getElementById('banner-upload');
+  input.click();
+  input.addEventListener('change', function() {
+    const file = input.files[0];
+    const reader = new FileReader();
+    reader.readAsDataURL(file);
+    reader.onload = function() {
+      document.getElementById('pfbanner').style.backgroundImage = `url(${reader.result})`;
+    };
+  });
+}
+
+function changeBgColor() {
+  const color = document.getElementById('bg-color-picker').value;
+  document.getElementById("page").style.backgroundColor = color;
+}
+
+function changeMenuColor() {
+  const color = document.getElementById('bg-color-picker').value;
+  document.getElementById("navbar").style.backgroundColor = color;
+}
+
+function changePostColor() {
+  const color = document.getElementById('bg-color-picker').value;
+  document.getElementById("post").style.backgroundColor = color;
+}
+
+function changeFontColor() {
+  const color = document.getElementById('bg-color-picker').value;
+  document.body.style.color = color;
+}
+
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded',function(){const mobileMenuButton=document.getElementById('mobile-menu');
+const navList=document.querySelector('.nav-list');
+mobileMenuButton.addEventListener('click',function(){navList.classList.toggle('active');});});
+</script>
+
+</body>
+</html>
+

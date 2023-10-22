@@ -1,0 +1,141 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8">
+<meta charset="UTF-8">
+<title>amplifire | home</title>
+<link rel="stylesheet" href="styles.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,400;1,700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+
+	<nav class="navbar">
+		<div class="menu-toggle" id="mobile-menu">
+			<span class="bar"></span>
+			<span class="bar"></span>
+			<span class="bar"></span>
+		</div>
+		<div class="nav-list">
+			<a href="index.html" class="nav-link"><img src="static/logo.png" alt="Logo" id="logo"></a>
+			<a href="#" class="nav-link">Discover</a>
+			<a href="#" class="nav-link">Trending</a>
+			<a href="profile.html" class="nav-link">Profile</a>
+			<div class="search-container">
+				<input type="text" placeholder="What's on your mind..." class="nav-link" id="search-bar">
+				<button class="search-button">Search</button>
+			</div>
+			<a href="#" class="nav-link">Login/Sign-up</a>
+		</div>
+
+	</nav>
+	
+	<div class="container">
+		<div class="column">
+			<div class="brick">
+				<h3>Following</h3>
+					<div class="column">
+
+						<div class="row">
+							<img src="static/usersel.png" id="pfp">
+        					username1
+						</div>
+
+						<div class="row">
+							<img src="static/usersel.png" id="pfp">
+        					username2
+						</div>
+
+						<div class="row">
+							<img src="static/usersel.png" id="pfp">
+        					username3
+						</div>
+
+						<div class="row">
+							<img src="static/usersel.png" id="pfp">
+        					username4
+						</div>
+
+					</div>
+
+			</div>
+		</div>
+		<div class="column wide-column">
+			<div class="brick">
+				<div class="post-container">
+					<div class="row">
+						<img src="static/usersel.png" id="pfp">
+        				<input type="text" placeholder="Write a post..." class="input" id="post-bar">
+					</div>
+					
+        			<button class="post-button">Post</button>
+      			</div>
+
+      			
+
+			</div>
+
+			<div class="brick">
+				<div class="post">
+					<div class="row">
+					<img src="static/usersel.png" id="pfp">
+        				<b>username1</b>
+        			</div>
+        			<div class="content">
+        				i got a promotion today at work!!
+        			</div>
+        			
+				</div>	
+			</div>
+
+			<div class="brick">
+				<div class="post">
+					<div class="row">
+					<img src="static/usersel.png" id="pfp">
+        				<b>username3</b>
+        			</div>
+        			<div class="content">
+        				sometimes i wonder if anyone even sees these. like this if you like my content!
+        			</div>
+        			
+				</div>	
+			</div>
+			
+		</div>
+		<div class="column">
+			<div class="brick">
+				
+					<h3>Trending</h3>
+
+					<div class="row">
+						<img src="static/usersel.png" id="pfp">
+        				post
+					</div>
+					<div class="row">
+						<img src="static/usersel.png" id="pfp">
+        				i'm thinking of quitting my job...
+					</div>
+					<div class="row">
+						<img src="static/usersel.png" id="pfp">
+        				anyone have a boss constantly micromanaging their every move?
+					</div>
+					<div class="row">
+						<img src="static/usersel.png" id="pfp">
+        				I have autism and I struggle with going out on dates. Any advice for making them a bit more comfortable?
+					</div>
+			</div>
+		</div>
+	</div>
+
+	<img src="static/banner.png" id="banner">
+	<script src="script.js"></script>
+
+<script>
+document.addEventListener('DOMContentLoaded',function(){const mobileMenuButton=document.getElementById('mobile-menu');
+const navList=document.querySelector('.nav-list');
+mobileMenuButton.addEventListener('click',function(){navList.classList.toggle('active');});});
+</script>
+
+</body>
+</html>
